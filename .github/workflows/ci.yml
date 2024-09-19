@@ -22,7 +22,7 @@ jobs:
         id: vault-secrets
         uses: hashicorp/vault-action@v2
         with:
-          url: https://54.161.17.57:8200/
+          url: https://54.80.110.53:8200/
           token: ${{ secrets.vault_token }}
           tlsSkipVerify: true
           secrets: |
@@ -47,5 +47,5 @@ jobs:
 
       - run: echo OK
         name: Release Software
-
+        if: ${{ github.ref == 'refs/tags/*-origin/develop' }}
 
