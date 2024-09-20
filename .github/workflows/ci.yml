@@ -22,7 +22,7 @@ jobs:
         id: vault-secrets
         uses: hashicorp/vault-action@v2
         with:
-          url: https://54.80.110.53:8200/
+          url: https://98.83.213.211:8200/
           token: ${{ secrets.vault_token }}
           tlsSkipVerify: true
           secrets: |
